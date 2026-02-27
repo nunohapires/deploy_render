@@ -30,7 +30,7 @@ agent = Agent(
         description="",
         search_knowledge=True, 
         num_history_runs=3,
-        #debug_mode=True
+        debug_mode=True
 )
 
 
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     )
     
         print("Iniciando servidor FastAPI...")
-        agent_os.serve(app="agent_os:app",reload=True)
+        agent_os.serve(app="agent_os:app",reload=True, host="0.0.0.0", port=10000)
