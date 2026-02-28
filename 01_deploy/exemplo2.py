@@ -47,4 +47,11 @@ if __name__ == "__main__":
         skip_if_exists=True,
         reader=PDFReader()
     )
-    agent_os.serve(app="exemplo2:app", host="0.0.0.0", port=10000, reload=True)
+    port = int(os.environ.get("PORT", 10000)) 
+    
+    agent_os.serve(
+        app="exemplo2:app", # Ajuste aqui se o arquivo tiver outro nome!
+        host="0.0.0.0", 
+        port=port, 
+        reload=False # Desative o reload em produção (Render) para evitar loops
+    )
