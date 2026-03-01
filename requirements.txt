@@ -1,0 +1,4 @@
+agno[openai,chroma,pdf]
+streamlit
+python-dotenv
+requests
